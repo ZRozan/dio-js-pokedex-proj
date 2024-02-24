@@ -12,6 +12,17 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
 
   pokemon.photo = pokeDetail.sprites.other["official-artwork"].front_default;
 
+  pokemon.stats = pokeDetail.stats.map((statIndex) => statIndex)
+  pokemon.statName = pokemon.stats.map((statIndex)=> statIndex.stat.name);
+  pokemon.statNumber = pokemon.stats.map((statIndex)=> statIndex.base_stat);
+
+
+  console.log(pokemon.stats.map(i=> i.base_stat))
+  console.log(pokemon.stats.map(i=> i.stat.name))
+  console.log()
+  //console.log(statNames)
+  //console.log(statNumbers)
+
   return pokemon
 }
 

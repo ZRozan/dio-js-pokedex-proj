@@ -1,4 +1,3 @@
-
 .pokemons {
   display: grid;
   grid-template-columns: 1fr;
@@ -24,7 +23,7 @@
 }
 
 .electric {
-  background-color: #fffb00;
+  background-color: #a3a000;
 }
 
 .ice {
@@ -85,6 +84,7 @@
   margin: 0.5rem;
   padding: 1rem;
   border-radius: 1rem;
+  border: double .25rem black;
 }
 
 .pokemon .number {
@@ -92,6 +92,12 @@
   opacity: 0.3;
   text-align: right;
   font-size: 0.625rem;
+}
+
+.pokemon .number .number-slot{
+  border: solid .25em black;
+  border-radius: 100%;
+  padding: 2px;
 }
 
 .pokemon .name {
@@ -105,22 +111,25 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .pokemon .detail .types {
+  display: flex;
+  flex-direction: row;
   padding: 0;
-  margin: 0;
   list-style: none;
 }
 
 .pokemon .detail .types .type {
-  filter:brightness(1.1);
+  filter: brightness(1.1);
   color: #fff;
-  padding: 0.25rem 0.5rem;
-  margin: 0.25rem 0;
+  padding: .25rem .5rem;
+  margin: .25rem .25rem;
   font-size: 0.625rem;
-  border-radius: 1rem;
+  border-radius: .75rem;
   text-align: center;
+  border: double .25rem rgb(59, 59, 59);
 }
 
 .pokemon .detail img {
@@ -129,7 +138,26 @@
   align-self: flex-end;
 }
 
-.pagination{
+.pokemon .stats {
+  margin-top: -15px;
+  background-color: rgb(207, 207, 207, .3);
+  border: groove .25rem rgb(53, 53, 53, .6);
+  border-radius: 10px;
+  text-align: left;
+}
+
+.pokemon .stats p {
+  margin-top: .125rem;
+  margin-left: 1rem;
+}
+
+.pokemon .stats ol {
+  margin-left: .25rem;
+  margin-bottom: .5rem;
+  list-style: none;
+}
+
+.pagination {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -138,7 +166,7 @@
   padding: 1rem;
 }
 
-.pagination button{
+.pagination button {
   padding: 0.25rem 0.5rem;
   margin: 0.25rem 0;
   font-size: 0.625rem;
@@ -146,7 +174,6 @@
   background-color: #6c79db;
   border: none;
   border-radius: 1rem;
-
 }
 
 @media screen and (min-width: 380px) {
